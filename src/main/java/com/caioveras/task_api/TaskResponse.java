@@ -1,4 +1,4 @@
-package com.caioveras.ola_api;
+package com.caioveras.task_api;
 
 public record TaskResponse(Long id, String titulo, String descricao, boolean concluido) {
 

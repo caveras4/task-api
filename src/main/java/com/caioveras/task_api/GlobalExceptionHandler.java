@@ -1,4 +1,4 @@
-package com.caioveras.ola_api;
+package com.caioveras.task_api;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -13,13 +13,13 @@ import java.util.Map;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<Map<String, String>> validaDTO(MethodArgumentNotValidException erroValidacao){
-        Map<String, String> mensagemCampo = new HashMap<>();
+    public ResponseEntity<Map<String, String>> handleValidationErrors(MethodArgumentNotValidException validationException){
+        Map<String, String> fieldMessages = new HashMap<>();
 
-        for(FieldError erro : erroValidacao.getBindingResult().getFieldErrors()){
-            mensagemCampo.put(erro.getField(), erro.getDefaultMessage());
+        for(FieldError error : validationException.getBindingResult().getFieldErrors()){
+            fieldMessages.put(error.getField(), error.getDefaultMessage());
         }
 
-        return ResponseEntity.badRequest().body(mensagemCampo);
+        return ResponseEntity.badRequest().body(fieldMessages);
     }
 }

@@ -1,4 +1,4 @@
-package com.caioveras.ola_api;
+package com.caioveras.task_api;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

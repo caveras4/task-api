@@ -1,4 +1,4 @@
-package com.caioveras.ola_api;
+package com.caioveras.task_api;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
