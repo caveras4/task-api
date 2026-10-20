@@ -1,13 +1,13 @@
-package com.caioveras.ola_api;
+package com.caioveras.task_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OlaApiApplication {
+public class TaskApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OlaApiApplication.class, args);
+		SpringApplication.run(TaskApiApplication.class, args);
 	}
 
 }

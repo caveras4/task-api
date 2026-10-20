@@ -1,10 +1,10 @@
-package com.caioveras.ola_api;
+package com.caioveras.task_api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OlaApiApplicationTests {
+class TaskApiApplicationTests {
 
 	@Test
 	void contextLoads() {
